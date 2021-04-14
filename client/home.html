@@ -1,0 +1,37 @@
+<template name="home">
+    <h1 class="center">Movies List</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="input-field col s12">
+                <input type="text" id="search-movie" class="validate" placeholder="titre du film">
+                <label for="autocomplete-input">Rechercher</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            {{#each movies}}
+                <div class="col s12 m4 l3">
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="responsive-img" style="height: 300px;" src="https://www.themoviedb.org/t/p/w440_and_h660_face{{poster_path}}">
+                            <a class="btn-floating halfway-fab waves-effect waves-light grey"><i class="material-icons">visibility</i></a>
+                            <span class="card-title ">{{title}}</span>
+                        </div>
+                        <div class="card-content">
+                            <p class="" style="height: 50px; overflow: hidden;">{{overview}}</p>
+                        </div>
+                        <div class="card-action">
+                            <div style="display: flex; align-items: center;">
+                                <button style="border: none; background: none; cursor: pointer;" data-id="{{id}}"><i class="material-icons red-text">favorite</i></button>
+                                <span>{{like}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</template>

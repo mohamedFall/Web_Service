@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/TheMovieProject.iml" filepath="$PROJECT_DIR$/.idea/TheMovieProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Web-service-Malick/Web-service-main/myapp3/.idea/myapp3.iml" filepath="$PROJECT_DIR$/../Web-service-Malick/Web-service-main/myapp3/.idea/myapp3.iml" />
+      <module fileurl="file://$USER_HOME$/Industrialisation des tests/react-tutorial/.idea/react-tutorial.iml" filepath="$USER_HOME$/Industrialisation des tests/react-tutorial/.idea/react-tutorial.iml" />
+    </modules>
+  </component>
+</project>

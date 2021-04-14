@@ -1,0 +1,47 @@
+<template name="HomeLayout">
+    <head>
+        <title>TheMovieProject</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <main>
+        <h1 class="center">Movies List</h1>
+
+        <div class="container">
+            <div class="row">
+                <div class="input-field col s10">
+                    <input type="text" id="search-movie" class="validate" placeholder="Rechercher un film">
+                </div>
+                <div class="input-field col s2">
+                    <button id="submit-search" class="btn validate">Rechercher</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                {{#each movies}}
+                    <div class="col s12 m4 l3">
+                        <div class="card">
+                            <div class="card-image">
+                                <a href="{{pathFor 'Movie' _id=id}}">
+                                    <img class="responsive-img" style="height: 300px;" src="https://www.themoviedb.org/t/p/w440_and_h660_face{{poster_path}}">
+                                    <a class="btn-floating halfway-fab waves-effect waves-light grey"><i class="material-icons">visibility</i></a>
+                                    <span class="card-title ">{{title}}</span>
+                                </a>
+                            </div>
+                            <div class="card-content">
+                                <p class="" style="height: 50px; overflow: hidden;">{{overview}}</p>
+                            </div>
+                            <div class="card-action">
+                                <div style="display: flex; align-items: center;">
+                                    <button style="border: none; background: none; cursor: pointer;" data-id="{{id}}"><i class="material-icons red-text">favorite</i></button>
+                                    <span>{{like}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    </main>
+</template>
